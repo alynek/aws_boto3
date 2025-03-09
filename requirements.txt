@@ -1,3 +1,5 @@
 requests
 boto3
 dotenv
+json
+os

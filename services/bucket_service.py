@@ -1,4 +1,4 @@
-from boto3_client import put_object
+from infra.boto3_client import put_object
 
 def put_json_object(json_object, json_name):
 

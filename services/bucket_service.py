@@ -1,11 +1,11 @@
-from infra.boto3_client import put_object
+import infra.boto3_client as boto3_client
 
-def put_json_object(json_object, json_name):
+def put_json_file(json_file, json_name):
 
     filename =  f'{json_name}.json'
 
-    put_object(
+    boto3_client.put_object(
         filename,
-        json_object,
-        ContentType="application/json"
+        json_file,
+        "application/json"
     )

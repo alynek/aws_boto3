@@ -9,3 +9,10 @@ def put_json_file(json_file, json_name):
         json_file,
         "application/json"
     )
+
+
+def file_exists(path):
+    file = boto3_client.get_file_by_path(path)
+
+    return file
+   

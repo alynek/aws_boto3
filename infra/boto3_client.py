@@ -23,3 +23,8 @@ def put_object(key, json_object, content_type):
         Body=json_object,
         ContentType=content_type
     )
+
+def get_file_by_path(path):
+    bucket = get_bucket()
+
+    return list(bucket.objects.filter(Prefix=path))
